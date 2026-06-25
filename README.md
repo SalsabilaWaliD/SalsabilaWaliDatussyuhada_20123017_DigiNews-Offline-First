@@ -1,7 +1,7 @@
 # 📰 DigiNews Offline-First
 
-**Enterprise Smart Dashboard** — ETS Mobile Programming Lanjut  
-Universitas Teknologi Digital, Semester Genap 2025/2026
+**Enterprise Smart Dashboard** — UAS Mobile Programming Lanjut  
+Universitas Teknologi Digital
 
 ---
 
@@ -46,7 +46,7 @@ lib/
 
 ## ✅ Checklist Spesifikasi Teknis
 
-### 1. Arsitektur & Environment (15%)
+### 1. Arsitektur & Environment 
 - [x] **Clean Architecture** — layer terpisah: data, domain, presentation
 - [x] **go_router** — navigasi `/`, `/detail`, `/about`
 - [x] **get_it** — dependency injection di `core/di/injection.dart`
@@ -61,20 +61,20 @@ lib/
   - NIM `20123017` → digit terakhir `7` → **GANJIL** → Sort **Z ke A (Descending)**
   - File: `lib/data/repositories/news_repository_impl.dart` → method `_sortArticlesDescending()`
 
-### 3. Isar Database & Lottie (20%)
+### 3. Isar Database & Lottie 
 - [x] **Isar** — cache artikel dari API, fallback saat offline
 - [x] **OfflineBanner** — muncul saat Airplane Mode, menampilkan data cache
 - [x] **🔥 Easter Egg Lottie** di halaman About:
   - Klik foto profil **7 kali** (= digit terakhir NIM) secara cepat
   - Animasi Lottie muncul memenuhi layar selama **3 detik**
 
-### 4. Native Integration / MethodChannel (15%)
+### 4. Native Integration / MethodChannel 
 - [x] **MethodChannel** `"com.salsabila.diginews/native"`
 - [x] **🔥 Kotlin membalik NIM**: `"20123017"` → `"71032102"`
 - [x] **Native Toast Android** menampilkan hasil reversed NIM
 - [x] File Kotlin: `android/app/src/main/kotlin/com/salsabila/diginews/MainActivity.kt`
 
-### 5. Testing & CI/CD (30%)
+### 5. Testing & CI/CD 
 - [x] **3+ Unit Tests** menggunakan Mocktail:
   - `test/data/news_repository_test.dart` — sorting logic + offline fallback
   - `test/presentation/bloc/news_bloc_test.dart` — BLoC state transitions
