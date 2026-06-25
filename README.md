@@ -92,7 +92,7 @@ lib/
 ### Prerequisites
 - Flutter SDK 3.10+
 - Android Studio / VS Code
-- Akun [NewsAPI.org](https://newsapi.org/register) (gratis)
+- Akun [NewsAPI.org](https://newsapi.org/register)
 
 ### Setup
 
@@ -146,41 +146,3 @@ flutter build apk --release --flavor prod --dart-define=FLAVOR=prod -t lib/main.
 flutter test
 ```
 
----
-
-## 🔥 Cara Demonstrate Anti-AI Features
-
-### 1. Sorting Z ke A (Digit NIM 7 = Ganjil)
-Buka `lib/data/repositories/news_repository_impl.dart` → tunjukkan method `_sortArticlesDescending()` dipanggil di layer Repository, **bukan di UI**.
-
-### 2. Easter Egg (7 klik foto)
-- Buka halaman About
-- Klik foto profil dengan cepat sebanyak **7 kali**
-- Animasi Lottie akan muncul memenuhi layar selama 3 detik
-
-### 3. Mode Offline
-- Aktifkan Airplane Mode di HP
-- Buka app → tetap tampil berita dari cache Isar
-- Banner orange "You're offline" muncul di atas
-
-### 4. MethodChannel (Kotlin)
-- Buka halaman About → tap "Reverse NIM via Kotlin"
-- Kotlin membalik `"20123017"` → `"71032102"`
-- Native Toast muncul + hasil tampil di UI
-
----
-
-## 📝 Catatan Git Commit Strategy
-
-Minimal 20 commit di minimal 3 hari berbeda. Contoh:
-
-**Hari 1:** Setup project, arsitektur, dependencies  
-**Hari 2:** Implementasi networking, BLoC, Isar  
-**Hari 3:** UI, testing, CI/CD, polish  
-
----
-
-## 🔗 Links
-- **Repository:** https://github.com/[username]/diginews
-- **APK Release:** (dari GitHub Actions artifacts)
-- **Video Presentasi:** (upload ke YouTube unlisted)
